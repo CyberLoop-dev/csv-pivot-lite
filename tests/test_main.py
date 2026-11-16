@@ -12,7 +12,7 @@ class PivotTests(unittest.TestCase):
         result = pivot(rows, "region", "quarter", "sales", "sum")
         self.assertEqual(result[0], ["", "q1", "q2"])
         self.assertEqual(result[1], ["north", 5.0, ""])
-        self.assertEqual(result[2], ["south", 0, 4.0])
+        self.assertEqual(result[2], ["south", "", 4.0])
 
     def test_count(self):
         self.assertEqual(pivot([{"a":"x","b":"y"}], "a", "b"), [["", "y"], ["x", 1]])
